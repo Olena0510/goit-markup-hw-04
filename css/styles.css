@@ -38,6 +38,7 @@ html {
   --contacts-footer-color: rgba(255, 255, 255, 0.6);
   --text-logo: 000000;
   --button-portfolio: #f5f4fa;
+  --icon-color: #afb1b8;
 
   /* flex-basis */
   --indent: 30px;
@@ -89,7 +90,9 @@ ol {
 img {
   display: block;
 }
+
 /* header */
+
 header {
   border-bottom: 1px solid #ececec;
   /* outline: 2px solid tomato; */
@@ -131,7 +134,7 @@ span {
 
 .contacts-list {
   display: flex;
-  gap: 50px;
+  gap: 30px;
 }
 
 .nav-list .nav-item {
@@ -166,6 +169,19 @@ span {
 .phone-link:hover,
 .phone-link:focus {
   color: var(--accent-color);
+}
+.contacts-item {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.contacts-icon {
+  fill: var(--additional-text-color);
+}
+.contacts-icon:hover,
+.contacts-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* hero */
@@ -216,9 +232,20 @@ span {
   text-align: center;
 }
 .about {
-  background: #2f303a;
+  height: 600px;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/image-hero/hero.jpg");
   padding-top: 200px;
   padding-bottom: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Секция особенности */
@@ -260,14 +287,50 @@ span {
   display: flex;
   gap: 30px;
 }
+.feature-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--button-portfolio);
+  /* outline: 2px solid tomato; */
+}
 
 .work-item {
   flex-basis: 270px;
 }
 
+/* .work-item:before{
+content:"";
+display: block;
+height: 120px;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+background-color: #F5F4FA;
+margin-bottom: 30px;
+padding: 25px 100px;
+/* outline: 2px solid tomato; */
+*/
+
+/* .icon-antenna::before{
+  background-image: url("../images/icons.svg/antenna\ 1.svg");
+}
+.icon-clock::before{
+  background-image: url("../images/icons.svg/clock\ 1.svg");
+}
+.icon-diagram::before{
+  background-image: url("../images/icons.svg/diagram\ 1.svg");
+}
+.icon-astronaut::before{
+  background-image: url("../images/icons.svg/astronaut\ 1.svg");
+} */
+
 /* Секция чем мы занимаемся */
 .job-title,
-.team-title {
+.team-title,
+.clients-title {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -308,7 +371,6 @@ span {
 
 .team-wrapper {
   padding-top: 30px;
-  padding-bottom: 30px;
   /* outline: 2px solid tomato; */
 }
 
@@ -329,6 +391,67 @@ span {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--additional-text-color);
+  margin-bottom: 16px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--primary-white-color);
+  border-radius: 50%;
+  /* outline: 2px solid tomato; */
+}
+.social-icon {
+  fill: var(--icon-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-link:hover .social-icon,
+.sosial-link:focus .social-icon {
+  fill: var(--primary-white-color);
+}
+
+/* Постоянные клиенты */
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-list {
+  display: flex;
+  gap: 30px;
+}
+.clients-item:hover {
+  border-color: var(--accent-color);
+}
+.client-icon {
+  fill: var(--icon-color);
+}
+.clients-link:hover .client-icon,
+.clients-link:focus .client-icon {
+  fill: var(--accent-color);
+}
+.clients-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
 /* Секция футер */
@@ -373,7 +496,48 @@ footer {
 .footer-contacts:focus {
   color: var(--accent-color);
 }
-
+.footer-container {
+  display: flex;
+  gap: 70px;
+  align-items: baseline;
+}
+.social-footer {
+  display: flex;
+  gap: 10px;
+  /* outline: 2px solid tomato; */
+}
+.social-subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin-bottom: 20px;
+}
+.footer-icon {
+  fill: var(--primary-white-color);
+}
+.network-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  /* outline: 2px solid tomato; */
+}
+.networks-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  /* outline: 2px solid tomato; */
+}
 /* ПОРТФОЛИО */
 
 .container-portfolio {
@@ -392,9 +556,9 @@ button {
   gap: 8px;
   margin-bottom: 50px;
 }
-.item-portfolio {
+/* .item-portfolio {
   flex-basis: calc(100%-var(--indent) * (var(--items)-1) / var(--items));
-}
+} */
 
 .btn {
   background-color: var(--button-portfolio);
@@ -412,11 +576,15 @@ button {
 .btn-current {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn:hover,
 .btn:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-works {
@@ -447,3 +615,26 @@ button {
   flex-wrap: wrap;
   gap: var(--indent);
 }
+.job-title,
+.team-title,
+.clients-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+
+  text-align: center;
+  margin-bottom: 50px;
+  /* outline: 2px solid tomato; */
+}
+.portfolio-link{
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
